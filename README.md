@@ -1,73 +1,145 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🔥 Streakly
 
-Currently, two official plugins are available:
+### *Build habits. Track streaks. Achieve greatness.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-## React Compiler
+<br />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[✨ Features](#-features) • [🚀 Quick Start](#-quick-start) • [🛠️ Tech Stack](#️-tech-stack) • [📁 Project Structure](#-project-structure)
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Feature | Description |
+|---------|-------------|
+| 🎯 **Task Management** | Create, organize, and track your daily habits and tasks |
+| 📊 **Streak Tracking** | Visual streak counters to keep you motivated |
+| 🗓️ **Heatmap Calendar** | GitHub-style contribution graph for your habits |
+| 🌙 **Dark/Light Mode** | Beautiful themes that adapt to your preference |
+| 💾 **Offline-First** | IndexedDB powered - works without internet |
+| ⚡ **Natural Language** | Add tasks using natural date parsing |
+| 🎉 **Celebrations** | Confetti animations when you hit milestones |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/devd-328/Streakly.git
+
+# Navigate to project
+cd Streakly
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) to see the magic! ✨
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+<table>
+<tr>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+<br>React 19
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
+<br>TypeScript
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=vite" width="48" height="48" alt="Vite" />
+<br>Vite
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind" />
+<br>Tailwind
+</td>
+</tr>
+</table>
+
+### Core Dependencies
+
+- **🐻 Zustand** - Lightweight state management
+- **📦 Dexie.js** - IndexedDB wrapper for offline storage
+- **🎭 Framer Motion** - Smooth animations
+- **📅 date-fns** - Date manipulation utilities
+- **🔍 chrono-node** - Natural language date parsing
+- **✨ Lucide React** - Beautiful icons
+
+---
+
+## 📁 Project Structure
+
 ```
+streakly/
+├── 📂 src/
+│   ├── 📂 components/
+│   │   ├── 📂 features/      # Core feature components
+│   │   │   ├── Heatmap.tsx
+│   │   │   ├── StreakStats.tsx
+│   │   │   ├── TaskCard.tsx
+│   │   │   └── TaskInput.tsx
+│   │   ├── 📂 layout/        # Layout components
+│   │   └── 📂 ui/            # Reusable UI components
+│   ├── 📂 lib/               # Utilities & stores
+│   │   ├── db.ts             # Database layer
+│   │   ├── nlp.ts            # Natural language processing
+│   │   ├── store.ts          # Zustand store
+│   │   └── utils.ts          # Helper functions
+│   ├── 📂 pages/             # Route pages
+│   └── 📄 main.tsx           # App entry point
+├── 📄 package.json
+└── 📄 vite.config.ts
+```
+
+---
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. 💾 Commit changes (`git commit -m 'Add amazing feature'`)
+4. 📤 Push to branch (`git push origin feature/amazing-feature`)
+5. 🔃 Open a Pull Request
+
+---
+
+<div align="center">
+
+### 💜 Made with love and lots of ☕
+
+**Keep your streaks alive! 🔥**
+
+[![GitHub](https://img.shields.io/badge/GitHub-devd--328-181717?style=flat-square&logo=github)](https://github.com/devd-328)
+
+</div>
